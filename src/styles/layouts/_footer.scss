@@ -1,0 +1,105 @@
+.footer {
+  text-align: center;
+  position: relative;
+  padding: 32px 0;
+  background-image: url('../img/footer-background.png');
+  background-color: var(--color-primary-dark);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+  @media screen and (min-width: $bp-tablet) {
+    text-align: left;
+  }
+  &::before,
+  &::after {
+    position: absolute;
+    background-repeat: no-repeat;
+    content: '';
+  }
+  &::before {
+    width: 182px;
+    height: 342px;
+    transform: rotate(20deg);
+    left: -80px;
+    top: 0;
+    background-image: url('../img/decor-bread-small.png');
+    @media screen and (min-width: $bp-tablet) {
+      left: 200px;
+      top: 100px;
+      transform: rotate(5deg);
+    }
+  }
+  &::after {
+    width: 305px;
+    height: 330px;
+    top: 320px;
+    right: 50;
+    background-image: url(../img/decor-bread-large.png);
+    @media screen and (min-width: $bp-tablet) {
+      top: 20px;
+      right: 120px;
+    }
+  }
+  &__container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    @media screen and (min-width: $bp-tablet) {
+      flex-direction: row;
+    }
+  }
+  &__nav,
+  &__address {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    @media screen and (min-width: $bp-tablet) {
+      flex-basis: 50%;
+      flex-direction: row;
+    }
+  }
+  &__logo,
+  &__menu {
+    flex-grow: 1;
+  }
+  &__address-list,
+  &__address-info {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    gap: 16px;
+  }
+  &__address-link {
+    font-weight: 300;
+    font-size: 16px;
+    color: var(--color-primary-light);
+    text-decoration: none;
+  }
+  &__address-link:hover {
+    color: var(--color-brand-light);
+  }
+
+  &__socials {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    margin-top: 16px;
+
+    @media screen and (min-width: $bp-tablet) {
+      justify-content: flex-start;
+    }
+  }
+
+  &__socials-icon {
+    fill: var(--color-primary-light);
+    &:hover {
+      fill: var(--color-brand-light);
+    }
+  }
+
+  &__address-copyright {
+    font-size: 14px;
+    color: var(--color-secondary-dark);
+  }
+}
