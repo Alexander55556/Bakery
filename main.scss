@@ -1,0 +1,56 @@
+// ========================================
+// 1. Variables & Functions (first)
+// ========================================
+@import './utils/variables/index';
+
+// ========================================
+// 2. Mixins
+// ========================================
+@import './utils/mixins';
+
+// ========================================
+// 3. Reset & Base Styles
+// ========================================
+@import './reset';
+@import './base';
+
+// ========================================
+// 4. Utilities (typography, animations, a11y)
+// ========================================
+@import './utils/fonts';
+@import './utils/texts';
+@import './utils/utils';
+@import './animations';
+@import './accessibility';
+
+// ========================================
+// 5. Components (small UI elements)
+// ========================================
+@import './components/buttons';
+@import './components/links';
+@import './components/format-card';
+@import './components/input';
+@import './components/carousel-button';
+@import './components/chef-card';
+@import './components/pagination';
+@import './components/form-terms';
+
+// ========================================
+// 6. Layout
+// ========================================
+@import './layouts/header';
+@import './layouts/footer';
+@import './layouts/modal';
+@import './layouts/mobile-menu';
+@import './layouts/container';
+
+
+// ========================================
+// 7. Blocks (sections)
+// ========================================
+@import './blocks/hero';
+@import './blocks/advantages';
+@import './blocks/traditions';
+@import './blocks/chefs';
+@import './blocks/formats';
+@import './blocks/contacts';
