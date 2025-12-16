@@ -1,0 +1,45 @@
+<section class="contact" id="contact">
+    <div class="container">
+        <div class="contact__container">
+            <div class="contact__form">
+                <h2 class="contact__title">
+                    Приєднуйся до мережі пекарень
+                </h2>
+                <p>Заповни форму, щоб ми звʼязались з тобою!</p>
+                <form name="contact-form" autocomplete="off" novalidate>
+                    <div class="contact__form-field input">
+                        <label class="input__label visually-hidden" for="user-name">
+                            Імʼя
+                        </label>
+                        <input class="input__control" type="text" name="user-name" id="user-name" placeholder="Імʼя"
+                            required />
+                    </div>
+                    <div class="contact__form-field input">
+                        <label class="input__label visually-hidden" for="user-tel">
+                            Телефон
+                        </label>
+                        <input class="input__control" type="tel" name="user-tel" id="user-tel" placeholder="Телефон"
+                            pattern="^\+[0-9]{12}" required />
+                    </div>
+                    <div class="contact__form-field input">
+                        <label class="input__label visually-hidden" for="user-email">
+                            Електронна пошта
+                        </label>
+                        <input class="input__control" type="email" name="user-email" id="user-email"
+                            placeholder="Електронна пошта" required />
+                    </div>
+                    <button class="contact__button button" type="submit">
+                        Замовити дзвінок
+                    </button>
+                    <p class="form-terms">
+                        Натискаючи на кнопку я погоджуюсь з
+                        <a class="form-terms__link" href="#">політикою конфіденційності</a>
+                    </p>
+                </form>
+            </div>
+            <iframe class="contact__map"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2540.1636289098733!2d30.4912733!3d50.4566776!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4ce637c006b2d%3A0xaf86385f19996ff0!2z0LLRg9C70LjRhtGPINCh0ZbRh9C-0LLQuNGFINCh0YLRgNGW0LvRjNGG0ZbQsiwgNTQsINCa0LjRl9CyLCAwMjAwMA!5e0!3m2!1suk!2sua!4v1762481716843!5m2!1suk!2sua"
+                allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </div>
+</section>

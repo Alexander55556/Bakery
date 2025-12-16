@@ -1,0 +1,83 @@
+// Accessibility (a11y) Utilities
+
+// Visually Hidden - Screen readers can see, visual not shown
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+// Focus Visible - Show focus for keyboard navigation
+:focus-visible {
+  outline: 2px solid var(--color-brand-light);
+  outline-offset: 2px;
+}
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: 2px solid var(--color-brand-light);
+  outline-offset: 2px;
+}
+
+// Skip Link - For keyboard navigation
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: var(--color-brand-dark);
+  color: var(--color-primary-light);
+  padding: 8px;
+  text-decoration: none;
+  z-index: 100;
+
+  &:focus {
+    top: 0;
+  }
+}
+
+// High Contrast Mode Support
+@media (prefers-contrast: more) {
+  :root {
+    --color-brand-light: #4a5a1a;
+    --color-primary-dark: #000000;
+  }
+}
+
+// Reduced Motion Support
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+// Light Mode (Default)
+@media (prefers-color-scheme: light) {
+  :root {
+    color-scheme: light;
+  }
+}
+
+// Dark Mode Support (Optional)
+@media (prefers-color-scheme: dark) {
+  // Can be extended with dark theme colors
+}
+
+// Reduced Data Mode
+@media (prefers-reduced-data: reduce) {
+  img {
+    background: var(--color-primary-light);
+  }
+}

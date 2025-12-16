@@ -1,0 +1,103 @@
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideInDown {
+  from {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    transform: scale(0.95);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+
+.animation-fade-in {
+  animation: fadeIn var(--transition-base);
+}
+
+.animation-slide-down {
+  animation: slideInDown var(--transition-base);
+}
+
+.animation-slide-up {
+  animation: slideInUp var(--transition-base);
+}
+
+.animation-slide-left {
+  animation: slideInLeft var(--transition-base);
+}
+
+.animation-slide-right {
+  animation: slideInRight var(--transition-base);
+}
+
+.animation-scale-in {
+  animation: scaleIn var(--transition-base);
+}
+
+.animation-pulse {
+  animation: pulse 2s infinite;
+}
