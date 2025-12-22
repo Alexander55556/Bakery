@@ -1,8 +1,29 @@
-const modal = document.querySelector('.backdrop');
-const modalBtnOpen = document.querySelector('.modal-btn-open');
-const modalBtnClose = document.querySelector('.modal-btn-close');
+const modal = document.querySelector('.backdrop')
+const openButtons = document.querySelectorAll('.modal-btn-open')
+const modalBtnClose = document.querySelector('.modal-btn-close')
 
-const toggleModal = () => modal.classList.toggle('is-hidden');
+if (modal && openButtons.length) {
+  const openModal = () => {
+    modal.classList.remove('is-hidden')
+    document.body.classList.add('is-scroll-disabled')
+  }
+  const closeModal = () => {
+    modal.classList.add('is-hidden')
+    document.body.classList.remove('is-scroll-disabled')
+  }
 
-modalBtnOpen.addEventListener('click', toggleModal);
-modalBtnClose.addEventListener('click', toggleModal);
+  openButtons.forEach((btn) => btn.addEventListener('click', openModal))
+  if (modalBtnClose) {
+    modalBtnClose.addEventListener('click', closeModal)
+  }
+  modal.addEventListener('click', (e) => {
+    if (e.target === modal) {
+      closeModal()
+    }
+  })
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      closeModal()
+    }
+  })
+}

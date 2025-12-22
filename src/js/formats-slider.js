@@ -1,22 +1,24 @@
-const swiper = new Swiper('.swiper-container', {
-  loop: true,
-  slidesPerView: 1,
-  spaceBetween: 20,
-  breakpoints: {
-    768: {
-      slidesPerView: 2,
+if (typeof Swiper !== 'undefined') {
+  const swiper = new Swiper('.swiper-container', {
+    loop: true,
+    slidesPerView: 1,
+    spaceBetween: 20,
+    breakpoints: {
+      768: {
+        slidesPerView: 2,
+      },
+      1280: {
+        slidesPerView: 3,
+      },
     },
-    1280: {
-      slidesPerView: 3,
+    pagination: {
+      el: '.pagination',
+      bulletClass: 'pagination__button',
+      bulletActiveClass: 'pagination__button--active',
     },
-  },
-  pagination: {
-    el: '.pagination',
-    bulletClass: 'pagination__button',
-    bulletActiveClass: 'pagination__button--active',
-  },
-  navigation: {
-    nextEl: '.formats__button--next',
-    prevEl: '.formats__button--prev',
-  },
-});
+    navigation: {
+      nextEl: '.formats__button--next',
+      prevEl: '.formats__button--prev',
+    },
+  });
+}

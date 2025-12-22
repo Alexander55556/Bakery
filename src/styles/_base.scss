@@ -13,6 +13,10 @@ body {
   }
 }
 
+body.is-scroll-disabled {
+  overflow: hidden;
+}
+
 // Headings
 h1,
 h2,
